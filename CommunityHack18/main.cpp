@@ -43,5 +43,52 @@ struct player{
     // Clase para el color
     player (Color c){
         
+        // Movimiento en x
+        
+        x=rand() % W;
+        
+        // Movimiento en y
+        
+        y=rand()%H;
+        
+        // Ir dando el color
+        
+        color = c;
+        
+        // Ahora en direccion
+        
+        dir=rand()%4;
+        
     }
+    
+    // Asi como cuando vas arriba y abajo, asi mismo derecha e izquierda
+    // 4 direcciones posibles
+    void tick(){
+        
+        if(dir==0)  y += 1;
+        if(dir==1)  x -=  1;
+        if(dir==2)  x += 1;
+        if(dir==3)  y -=  1;
+        
+        // En caso de salir del screen duhhh duhhhh
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 };
