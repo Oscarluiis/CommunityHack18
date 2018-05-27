@@ -358,12 +358,18 @@ int main(){
     
     sf::Sprite sprite(texture);
     
-    // Crear un texto grafico para mostrar
+    // Crear un texto grafico para mostrar (tengo sueño xD hora actual 03:36) -> luego sigo
     
+    sf::Font font;
     
-    
-    
+    if(!font.loadFromFile(resourcePath()+"Fuente")){
+        
+        return EXIT_FAILURE;
+      
 }
+    sf::Text text(" \n " " \n " " \n  " " \n Hello User : \n "" \n Welcome to The Tron Game \n "" \n Choose an option : \n \n \n  "" \n " " A- To play \n \n \n " " B- Guide \n \n \n " " S- Score \n \n " " C- Exit" , font, 18);
+    
+     text.setFillColor(sf::Color::White);
     
     
     
