@@ -194,6 +194,21 @@ void game (){
     
     // Declara la variable fuente (hora actual : 21:33)
     
+    Font font;
+    
+    if(!font.loadFromFile(resourcePath()+"NombreImagen3")){
+        
+        return EXIT_FAILURE;
+    }
+    
+    Text tex ("¡Ganaste!", font, 35);
+    tex.setPosition(W/2-80, 20);
+    
+    // Probando efectos visuales (shader como neon) ------ Proceso de decision (si se pone o no)
+    // However trato de implementar (hora actual : 21:41)
+    // pdt: voy a tomar un receso lol xD
+    Shader* shader = new Shader;
+    
     
     
     
