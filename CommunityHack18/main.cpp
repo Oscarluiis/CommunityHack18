@@ -147,8 +147,15 @@ void registro(){
 
 // Ahora la funcion para que escriba (hora actual : 20:56)
 
+void escribir (string pal){
+    
+    ofstream fichero;
+    fichero.open("Registro.txt",std::ios_base::app);
+    fichero<<pal;
+    fichero.close();
+}
 
-
+// Abrir el juego o al menos la ventana lol (hora actual : 21:06)
     
     
     
