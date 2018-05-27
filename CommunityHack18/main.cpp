@@ -358,7 +358,7 @@ int main(){
     
     sf::Sprite sprite(texture);
     
-    // Crear un texto grafico para mostrar (tengo sueño xD hora actual 03:36) -> luego sigo
+    // Crear un texto grafico para mostrar (hora actual 03:36) -> luego sigo
     
     sf::Font font;
     
@@ -367,15 +367,71 @@ int main(){
         return EXIT_FAILURE;
       
 }
-    sf::Text text(" \n " " \n " " \n  " " \n Hello User : \n "" \n Welcome to The Tron Game \n "" \n Choose an option : \n \n \n  "" \n " " A- To play \n \n \n " " B- Guide \n \n \n " " S- Score \n \n " " C- Exit" , font, 18);
+    sf::Text text(" \n " " \n " " \n  " " \n Hello User : \n "" \n Community Hack 2018 \n "" \n Choose an option : \n \n \n  "" \n " " A- To play \n \n \n " " B- Guide \n \n \n " " S- Score \n \n " " C- Exit" , font, 18);
     
      text.setFillColor(sf::Color::White);
     
     
+    sf::Music music;
+    
+    if(!music.openFromFile(resourcePath()+"Cancion.ogg")){
+        return EXIT_FAILURE;
+        
+    }
+    
+    music.play();
+    
+    while(window.isOpen()){
+        
     
     
     
+    // Procesos de los eventos
     
     
+    sf:: Event event;
+    
+    while (window.pollEvent(event)){
+        
+        
+        //Cerrar
+        
+        if(event.type == sf::Event::Closed)
+            window.close();
+    }
+    
+    // Con tecla
+    
+    if(Keyboard::isKeyPressed(Keyboard::C)){
+        window.close();
+    }
+    
+    if(Keyboard::isKeyPressed(Keyboard::B)){
+        
+        instruccion();
+    }else if (Keyboard::isKeyPressed(Keyboard::A)){
+        game();
+    }else if(Keyboard::isKeyPressed(Keyboard::S)){
+        registro();
+    }
+    
+    
+    // Limpiar la pantalla
+    window.clear();
+    
+    //Dibijar sprite
+    window.draw(text);
+    
+    // Actualizar ventana
+    window.display();
+    
+}
+   
+    return EXIT_SUCCESS;
+
+}
+
+// Terminado proyecto (hora actual : 06:24) ---> Solo falta ponerle imagenes y hacerlo mas vistoso
+// Logica y compilado funcionando correctamente.
     
     
