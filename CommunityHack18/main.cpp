@@ -298,7 +298,40 @@ void game (){
     }
 }
 
+// Funcion de instrucciones (hora actual 02:51)
+
+void instruccion(){
     
+    RenderWindow app (VideoMode(800,600),"Como Jugar");
+    app.setFramerateLimit(60);
+    
+    Texture t1;
+    
+    if(!t1.loadFromFile(resourcePath()+"NombreImagen4")){
+        return EXIT_FAILURE;
+        
+    }
+    
+    Sprite sback(t1);
+    while(app.isOpen()){
+        
+        Event e;
+        
+        while(app.pollEvent(e)){
+            if(e.type==Event::Closed){
+                app.close();
+            }
+        }
+        
+        app.clear();
+        app.draw(sback);
+        app.display();
+    }
+    
+}
+
+
+
     
     
     
