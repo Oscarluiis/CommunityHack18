@@ -207,7 +207,17 @@ void game (){
     // Probando efectos visuales (shader como neon) ------ Proceso de decision (si se pone o no)
     // However trato de implementar (hora actual : 21:41)
     // pdt: voy a tomar un receso lol xD
+    
     Shader* shader = new Shader;
+    
+    shader  -> loadFromFile(resourcePath()+"shader.frag", Shader :: Fragment);
+    shader -> setUniform("frag_ScreenResolution",  100);
+    shader -> setUniform ("frag_LightAttenuation", 100);
+    RenderStates states; states.shader = shader;
+    
+    // Variable random para que vayan 0-0 xD (hora actual : 23:38)
+    
+    bool game = -1;
     
     
     
