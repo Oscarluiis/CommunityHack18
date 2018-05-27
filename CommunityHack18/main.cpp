@@ -132,8 +132,31 @@ void registro(){
     archivo.close();
     
     while(app.isOpen()){
+        Event e;
+        while(app.pollEvent(e)){
+            if(e.type == Event::Closed)
+                app.close();
+        }
         
+        texto.setString(cadena);
+        app.clear();
+        app.draw(texto);
+        app.display();
     }
+}
+
+// Ahora la funcion para que escriba (hora actual : 20:56)
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
