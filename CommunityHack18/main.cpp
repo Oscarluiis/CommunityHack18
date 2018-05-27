@@ -176,6 +176,25 @@ void game (){
     
     //Definiendo el color por cada jugador (hora actual : 21:16)
     
+    player p1(Color::Red), p2(Color::White);
+    
+    Sprite sprite;
+    
+    // Procesar textura (hora actual : 21:27)
+    
+    RenderTexture text;
+    
+    // Se crea (Es al contorno de la ventana)
+    
+    text.create(W, H);
+    text.setSmooth(true);
+    sprite.setTexture(text.getTexture());
+    text.clear();
+    text.draw(sBackground);
+    
+    // Declara la variable fuente (hora actual : 21:33)
+    
+    
     
     
     
