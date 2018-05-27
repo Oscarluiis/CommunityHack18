@@ -331,7 +331,39 @@ void instruccion(){
 }
 
 
-
+int main(){
+    
+    
+    // Crear la ventana principal
+    
+    sf::RenderWindow window(sf::VideoMode(800, 600),  "Community Hack");
+    
+    // Dar el icono
+    
+    sf::Image icon;
+    
+    if(!icon.loadFromFile(resourcePath()+"Icono")){
+        return EXIT_FAILURE;
+    }
+    
+    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+    
+    
+    // Cargar los sprites (texturas) para mostrar
+    sf::Texture texture;
+    
+    if(!texture.loadFromFile(resourcePath()+"Imagen")){
+        return EXIT_FAILURE;
+    }
+    
+    sf::Sprite sprite(texture);
+    
+    // Crear un texto grafico para mostrar
+    
+    
+    
+    
+}
     
     
     
