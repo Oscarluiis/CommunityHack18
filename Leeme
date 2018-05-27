@@ -1,0 +1,9 @@
+= = = = = = NOTA = = = = = =
+
+En cada lugar donde se menciona loadFromFile
+	(Sea en background de menu, icono, musica)
+	se cambia solamente especificando el path de lo que se quiere poner.
+
+Se recomienta poner en donde estan las comillas "" el path de lo que queremos ubicar, ya que se encuentra de un solo y no en resource.
+
+#CommunityHack18
