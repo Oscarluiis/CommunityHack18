@@ -156,6 +156,34 @@ void escribir (string pal){
 }
 
 // Abrir el juego o al menos la ventana lol (hora actual : 21:06)
+
+void game (){
+    
+    
+    srand(time(0));
+    // Ventana
+    RenderWindow window (VideoMode (W,H), "Community Hack 2018");
+    window.setFramerateLimit(60);
+    
+    Texture texture;
+    
+    if(!texture.loadFromFile(resourcePath()+"NombreImagen2")){
+        
+        return EXIT_FAILURE;
+    }
+    
+    Sprite sBackground(texture);
+    
+    //Definiendo el color por cada jugador (hora actual : 21:16)
+    
+    
+    
+    
+    
+    
+    
+    
+}
     
     
     
