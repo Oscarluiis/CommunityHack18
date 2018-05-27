@@ -274,9 +274,13 @@ void game (){
             field [p1.x][p1.y] = 1;
             field [p2.x][p2.y] = 1;
             
-            // Forma que ira dibujando
+            // Forma que ira dibujando (hora actual : 02:25)
             
             CircleShape cir(3);
+            cir.setPosition(p1.x, p1.y); cir.setFillColor(p1.color); text.draw(cir);
+            cir.setPosition(p2.x, p2.y); cir.setFillColor(p1.color); text.draw(cir);
+            
+            text.display();
             
         }
     
