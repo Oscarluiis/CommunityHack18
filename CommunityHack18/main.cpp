@@ -239,8 +239,8 @@ void game (){
         
         if (Keyboard :: isKeyPressed(Keyboard :: A)) if (p2.dir != 2) p2.dir = 1;
         if (Keyboard :: isKeyPressed(Keyboard :: D)) if (p2.dir != 1) p2.dir = 2;
-        if(Keyboard :: isKeyPressed(Keyboard::W)) if (p2.dir != 3) p2.dir =0;
-        if(Keyboard:: isKeyPressed(Keyboard :: S)) if (p2.dir != 0) p2.dir=3;
+        if (Keyboard :: isKeyPressed(Keyboard::W)) if (p2.dir != 3) p2.dir =0;
+        if (Keyboard :: isKeyPressed(Keyboard :: S)) if (p2.dir != 0) p2.dir=3;
         
      // pdt: hora actual : 00:07
         
@@ -254,6 +254,31 @@ void game (){
         }
         
         // Velocidad (hora actual : 00:12 )
+        
+        for ( int i=0; i< speed ; i++ ){
+            
+            p1.tick(); p2.tick();
+            
+            if (field [p1.x] [p1.y] == 1){
+                Game = 0;
+                tex.setFillColor(p2.color);
+                escribir("\n\n GANADOR: Jugador 1\t Puntos: 10 ");
+            }
+            
+            if (field[p2.x][p2.y]==1){
+                Game = 0;
+                tex.setFillColor(p1.color);
+                escribir("\n\n GANADOR: Jugador 2\t Puntos: 10 ");
+            }
+            
+            field [p1.x][p1.y] = 1;
+            field [p2.x][p2.y] = 1;
+            
+            // Forma que ira dibujando
+            
+            CircleShape cir(3);
+            
+        }
     
     }
     
