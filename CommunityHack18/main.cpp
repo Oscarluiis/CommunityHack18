@@ -72,12 +72,21 @@ struct player{
         
         // En caso de salir del screen duhhh duhhhh
         
-        
+        if(x>=W) x=0; if(x<0) x=W-1;
+        if(y>=H) y=0; if (y<0) y=H-1;
+    
     }
     
+    //Para ir pintando
     
+    Vector3f getColor(){
+        return Vector3f(color.r,color.g,color.b);
+    }
     
-    
+};
+
+
+
     
     
     
