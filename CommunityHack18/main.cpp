@@ -242,7 +242,7 @@ void game (){
         if(Keyboard :: isKeyPressed(Keyboard::W)) if (p2.dir != 3) p2.dir =0;
         if(Keyboard:: isKeyPressed(Keyboard :: S)) if (p2.dir != 0) p2.dir=3;
         
-    
+     // pdt: hora actual : 00:07
     
     }
     
