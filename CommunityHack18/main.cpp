@@ -217,7 +217,7 @@ void game (){
     
     // Variable random para que vayan 0-0 xD (hora actual : 23:38)
     
-    bool game = -1;
+    bool Game = -1;
     
     while (window.isOpen()){
     
@@ -243,6 +243,17 @@ void game (){
         if(Keyboard:: isKeyPressed(Keyboard :: S)) if (p2.dir != 0) p2.dir=3;
         
      // pdt: hora actual : 00:07
+        
+        // Validar el empate
+        
+        if (!Game){
+            window.draw(tex);
+            window.display();
+            continue;
+            
+        }
+        
+        // Velocidad (hora actual : 00:12 )
     
     }
     
