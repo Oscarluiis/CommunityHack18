@@ -282,21 +282,22 @@ void game (){
             
             text.display();
             
+            shader -> setUniform("frag_LightOrigin", Vector2f(p1.x, p1.y));
+            shader -> setUniform("frag_LightColor", p1.getColor());
+            
+            text.draw(sprite, states);
+            
+            shader ->  setUniform("frag_LightOrigin", Vector2f(p2.x, p2.y));
+            shader -> setUniform("frag_LightColor", p2.getColor());
+            text.draw(sprite, states);
         }
-    
+        // Mostrar
+        window.clear();
+        window.draw(sprite);
+        window.display();
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
-    
-    
+
     
     
     
