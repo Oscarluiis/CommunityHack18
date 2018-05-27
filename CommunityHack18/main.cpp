@@ -85,19 +85,56 @@ struct player{
     
 };
 
+// La parte de archivos, donde va quedar registrado las victorias y apertura del juego
 
+string toString (int n){
+    stringstream s;
+    s<<n;
+    return s.str();
+}
 
+void registro(){
+    
+    RenderWindow app(VideoMode(800,600), "Community Hack 2018");
+    //Crear la textura lol
+    Texture t;
+    
+    // Cargar la imagen cualquiera
+    if(!t.loadFromFile(resourcePath()+"NombreImagen.png")){
+        return EXIT_FAILURE;
+    }
+   
+    // Sprite es para utilizar la imagen cargada en la tarjeta grafica y fuente pues... la fuente
+    
+    Sprite ft(t);
+    Font fuente;
+    
+    //Cargar la fuente cualquiera
+    if(!fuente.loadFromFile(resourcePath() + "arial.ttf")){
+        return EXIT_FAILURE;
+    }
+    
+    Text texto;
+    String cadena;
+    cadena="=======================\n   MIS REGISTROS       \n=======================\n";
+    texto.setFont(fuente);
+    texto.setCharacterSize(12);
+    texto.setPosition(10, 10);
+    ifstream  archivo("Registro.txt");
+    string line;
+    
+    if(archivo.is_open()){
+        while(getline(archivo,line)){
+            cadena=cadena+line+"\n";
+        }
+    }
+    
+    archivo.close();
+    
+    while(app.isOpen()){
+        
+    }
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-};
